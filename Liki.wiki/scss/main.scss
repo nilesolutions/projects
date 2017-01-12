@@ -1,0 +1,38 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1280px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+//@import 'vendors/normalize';
+
+@import 'core/include-media';
+@import "core/variables";
+@import "core/fonts";
+@import "core/mixins";
+@import "core/helpers";
+@import "core/base";
+//@import "core/icons";
+@import "plugins/fancybox";
+@import "plugins/jcf";
+@import "plugins/icheck-plugin";
+@import "plugins/sumoselect";
+@import "plugins/slick";
+@import "plugins/jquery.countdown";
+@import "plugins/jquery-ui";
+@import "modules/header";
+@import "core/style";
+@import "modules/footer";

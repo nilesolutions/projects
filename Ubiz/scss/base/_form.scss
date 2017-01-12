@@ -1,0 +1,346 @@
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+//input[type='url'],
+// input[type='date'],
+textarea {
+  @include placeholder {
+    color: $placeholder-color;
+  }
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  box-sizing: border-box;
+  height:auto;
+  padding: $form-element-padding;
+  margin:0;
+  color:$gray;
+  font-size:16px;
+  line-height:19px;
+  border-radius:3px;
+  border:1px solid $form-element-border-color !important;
+  background:#fff;
+  box-shadow:none !important;
+  
+  &:focus {
+    border-color:$l-blue !important;
+  }
+  
+  &:focus::-webkit-input-placeholder {color: transparent !important;}
+  &:focus::-moz-placeholder {color: transparent !important;}
+  &:focus:-moz-placeholder {color: transparent !important;}
+  &:focus:-ms-input-placeholder {color: transparent !important;}
+  
+  /* invalid color */
+  .input-error & {
+    border: 1px solid #f33 !important;
+  }
+}
+
+textarea.materialize-textarea {
+  box-sizing: border-box;
+  font-size: 14px;
+  min-height: 130px;
+  padding: $form-element-padding;
+  margin:0;
+  width: 100% !important;
+  &:focus {
+    background:#fff;
+  }
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  cursor: pointer;
+  min-height: 50px;
+  font-size:14px;
+  text-transform:uppercase;
+  color:#1cd142;
+  background:none;
+  border: 1px solid #005786;
+  outline:none;
+}
+
+form {
+  
+  input[type="radio"]:not(:checked) + label,
+  input[type="radio"]:checked + label {
+    padding-left:30px;
+    font-size:16px;
+  }
+  input[type="radio"] + label {
+    color:#999;
+    &:before,
+    &:after {
+      width:20px;
+      height:20px;
+      left:-4px;
+      top: -1px;
+    }
+  }
+  input[type="radio"]:checked + label {
+    &:after {
+      background:$l-blue;
+      border-color:$l-blue !important;
+    }
+    &:before {
+      border-color:$l-blue !important;
+    }
+  }
+  input[type="radio"]:checked + label {
+    color:#333;
+  }
+  [type="radio"] + label:before,
+  [type="radio"] + label:after {
+    transition:transform 0.3s linear !important;
+  }
+  
+  .input-holder {
+    
+    .row {
+      margin-bottom:0;
+      
+      .input-field {
+        margin:0;
+      }
+    }
+  }
+  
+  .input-field {
+    position:relative;
+    margin:0 0 20px;
+    &.input-error {
+      
+      label {
+        color:#f33 !important;
+      }
+    }
+    
+    input:focus + label.active,
+    textarea:focus + label.active {
+      animation-name: label-width;
+      animation-duration: 3s;
+    }
+    
+    label {
+      top:16px;
+      left:18px;
+      right:0;
+      color: #999 !important;
+      font-size: 16px !important;
+      line-height:19px;
+      font-weight: 400;
+      transition: none;
+      &.active {
+        transform: translateY(-220%);
+        left:0;
+        font-size:11px !important;
+        line-height:14px;
+      }
+      
+      span {
+        display:block;
+        overflow:hidden;
+        
+        span {
+          width:500px;
+          display:block;
+        }
+      }
+    }
+    
+    .error-text {
+      display:none;
+      position:absolute;
+      font-size:11px;
+      line-height:13px;
+      color:#f33;
+      left:auto;
+      right:0;
+      bottom:-18px;
+    }
+    
+    input.invalid:not([type]) + label::after,
+    input.invalid:focus:not([type]) + label::after,
+    input.invalid[type="text"] + label::after,
+    input.invalid[type="text"]:focus + label::after,
+    input.invalid[type="password"] + label::after,
+    input.invalid[type="password"]:focus + label::after,
+    input.invalid[type="email"] + label::after,
+    input.invalid[type="email"]:focus + label::after,
+    input.invalid[type="url"] + label::after,
+    input.invalid[type="url"]:focus + label::after,
+    input.invalid[type="time"] + label::after,
+    input.invalid[type="time"]:focus + label::after,
+    input.invalid[type="date"] + label::after,
+    input.invalid[type="date"]:focus + label::after,
+    input.invalid[type="datetime"] + label::after,
+    input.invalid[type="datetime"]:focus + label::after,
+    input.invalid[type="datetime-local"] + label::after,
+    input.invalid[type="datetime-local"]:focus + label::after,
+    input.invalid[type="tel"] + label::after,
+    input.invalid[type="tel"]:focus + label::after,
+    input.invalid[type="number"] + label::after,
+    input.invalid[type="number"]:focus + label::after,
+    input.invalid[type="search"] + label::after,
+    input.invalid[type="search"]:focus + label::after,
+    textarea.materialize-textarea.invalid + label::after,
+    textarea.materialize-textarea.invalid:focus + label::after {
+      margin-top:2px;
+      font-weight:500;
+      position:absolute;
+      right:10px;
+      bottom:0;
+    }
+  }
+  
+  label.label {
+    position:static;
+    float:left;
+    width:50%;
+    font-size:14px;
+    line-height:17px;
+    margin:5px 0 0;
+    color: #333 !important;
+  }
+  
+  .input-error .error-text {
+    display:block;
+  }
+  
+  .radio-holder {
+    @extend %clearfix;
+    margin:0 0 55px;
+    
+    .input-holder {
+      margin:0 0 25px;
+    }
+  }
+  
+  [type="checkbox"] + label {
+    font-size:0;
+    line-height:0;
+    height:20px;
+    margin:2px 11px 0 0;
+  }
+  
+  .filled-in[type="checkbox"] + label:before,
+  .filled-in[type="checkbox"] + label:after {
+    transition: none !important;
+  }
+  
+  .filled-in[type="checkbox"]:not(:checked) + label:after {
+    border-color:#ccc;
+    border-radius:0;
+    background:#fff;
+  }
+  
+  .filled-in[type="checkbox"]:checked + label:after {
+    border-color:$l-blue;
+    background:$l-blue;
+    border-radius:0;
+  }
+  .filled-in[type="checkbox"]:checked + label:before {
+    height: 12px;
+    left: 1px;
+    top: 1px;
+  }
+}
+
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+  form .input-field label {
+    top:14px;
+  }
+}
+
+.form,
+.item {
+  
+  .filled-in[type="checkbox"]:checked + label:after,
+  [type="checkbox"].filled-in:not(:checked) + label:after {
+    border-radius:2px;
+  }
+  
+  .file-field {
+    width:100%;
+    margin:0;
+    
+    div.btn {
+      float:right;
+      position:relative;
+      min-width:0;
+      height:auto;
+      padding:0;
+      margin:-3px 0 -2px;
+      font-size:24px;
+      line-height:1;
+      color:$blue;
+      border:none;
+      background:none;
+      overflow:hidden;
+      &:hover {
+        color:$d-blue;
+      }
+      
+      span {
+        
+        i {
+          display:inline-block;
+          position:relative;
+        }
+      }
+    }
+    
+    input[type="file"] {
+      font: 1000px serif;
+      margin: 0;
+      padding: 0;
+      right: 0;
+      top: 0;
+      left: auto;
+      bottom: auto;
+      position: absolute;
+      z-index: 20;
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      opacity: 0;
+      color: transparent;
+      width: auto;
+    }
+    
+    .file-path-wrapper {
+      padding:0;
+      margin:-11px 0;
+      width:calc(100% - 26px);
+      overflow:hidden;
+      
+      .file-path {
+        padding: 10px 18px;
+        font-size:14px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        border:none !important;
+      }
+    }
+  }
+}
+
+@keyframes label-width{
+    0% { width:0; }
+    100% { width:100%; }
+}
+@-webkit-keyframes label-width{
+    0% { width:0; }
+    100% { width:100%; }
+}
+@-moz-keyframes label-width{
+    0% { width:0; }
+    100% { width:100%; }
+}

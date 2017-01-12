@@ -1,0 +1,143 @@
+$green: #b4cf00;
+$white: #fff;
+$black: #000;
+$dark: #333;
+$gray: #999;
+$disable: #ccc;
+$red: #f66;
+$pink: #e91e63;
+
+$sf: 'sf_ui__text', sans-serif;
+$sf-alt: 'sf_ui__textbold_g3', sans-serif;
+$open: 'Open Sans', sans-serif;
+
+$animation-speed:0.3s;
+
+@mixin border-radius($radius: 50%) {
+  -webkit-border-radius: $radius;
+	  -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			 border-radius: $radius;
+}
+
+@mixin fill($t: 0, $l: 0, $r: 0, $b: 0) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@mixin ellipsis($width: 100%) {
+	max-width: $width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin rotate($turn) {
+  -webkit-transform: rotate($turn);
+	  -moz-transform: rotate($turn);
+		-ms-transform: rotate($turn);
+			 transform: rotate($turn);
+}
+
+@mixin position($x: -50%, $y: -50%) {
+  -webkit-transform: translate($x, $y);
+	  -moz-transform: translate($x, $y);
+		-ms-transform: translate($x, $y);
+			 transform: translate($x, $y);
+}
+
+@mixin transition($property: all, $duration: 500ms) {
+  -webkit-transition: $property $duration ease;
+	  -moz-transition: $property $duration ease;
+		-ms-transition: $property $duration ease;
+			 transition: $property $duration ease;
+}
+
+@mixin delay($duration: 500ms) {
+  -webkit-transition-delay: $duration;
+	  -moz-transition-delay: $duration;
+		-ms-transition-delay: $duration;
+			 transition-delay: $duration;
+}
+
+@mixin spacing($space: 0.05em) {
+	letter-spacing: $space;
+}
+
+@mixin border($width: 1px, $color: $green) {
+	border: {
+		width: $width;
+		style: solid;
+		color: $color;
+	}
+}
+
+@mixin columns($count: 2, $gap: 40px) {
+	-moz-column-count: $count;
+	-moz-column-gap: $gap;
+	-webkit-column-count: $count;
+	-webkit-column-gap: $gap;
+	column-count: $count;
+	column-gap: $gap;
+}
+
+@mixin list($m: 0, $p: 0) {
+	margin: $m;
+	padding: $p;
+	list-style: none;
+}
+
+@mixin inline-list {
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: -5px;
+}
+
+@mixin inline-li($size: 0, $line: 0) {
+	font-size: $size;
+	line-height: $line;
+	letter-spacing: normal;
+}
+
+@mixin indent {
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+@mixin cover($size: cover, $pos: 50%) {
+	background-size: $size;
+	background-position: $pos;
+	background-repeat: no-repeat;
+}
+
+@mixin inline($align: top) {
+	display: inline-block;
+	vertical-align: $align;
+}
+
+@mixin triangle($width: 10px 10px 0 10px, $color: $dark transparent transparent transparent) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: $width;
+	border-color: $color;
+}
+
+@mixin shadow($h: 0, $v: 0, $blur: 0, $color: $black) {
+	-webkit-box-shadow: $h $v $blur $color;
+			  box-shadow: $h $v $blur $color;
+}
+
+@mixin clearfix {
+  &:after {
+	 content: ".";
+	 display: block;
+	 height: 0;
+	 clear: both;
+	 visibility: hidden;
+  }
+  * html & { height: 1px }
+}

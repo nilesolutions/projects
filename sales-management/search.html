@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sales Management</title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700|Open+Sans:300,400,400i,600,700" rel="stylesheet"> 
+	<link media="all" rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" defer></script>
+	<script type="text/javascript" src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper" class="page">
+		<header id="header">
+			<div class="container">
+				<div class="logo">
+					<a href="#">
+						<!-- picturefill: full manual control -->
+						<picture>
+							<source srcset="images/logo-m.svg" media="(max-width: 767px)">
+							<source srcset="images/logo.jpg" media="(max-width: 1024px)">
+							<source srcset="images/logo.jpg, images/logo.jpg 2x">
+							<img src="images/logo.jpg" alt="Sales Management" width="250" height="81">
+						</picture>
+					</a>
+				</div>
+				<div class="holder">
+					<a class="nav-opener" href="#"><span>Menu</span></a>
+					<nav class="login-menu">
+						<ul>
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<nav class="menu-drop">
+			<a href="#" class="nav-opener"></a>
+			<form action="#" class="search-form">
+				<input type="search" placeholder="Search" />
+				<button type="submit"></button>
+			</form>
+			<ul id="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Community</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="add-nav">
+				<li><a href="#">Become a Member</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</nav>
+		<main id="main" role="main">
+			<div class="breadcrumbs-holder">
+				<div class="container alt">
+					<div class="page-title">
+						<h1>Search</h1>
+					</div>
+					<nav>
+						<ul class="breadcrumbs">
+							<li><a href="#">Home</a></li>
+							<li>Search</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="container alt twocolumns content-area alt content-area-4">
+				<div class="content-section content-section-2">
+					<section class="col">
+						<div class="sort-block">
+							<a href="#" class="opener-search">Search titles, key words and topics</a>
+							<div class="search-slide">
+								<form action="#" class="search-form">
+									<input type="search" placeholder="Search" />
+									<button type="submit">Go</button>
+								</form>
+								<form action="#" class="sort-form">
+									<div class="open-close">
+										<a class="opener" href="#">Category</a>
+										<div class="slide">
+											<div class="check-holder">
+												<div class="check-box">
+													<label for="check-1">
+														<input id="check-1" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Article</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-2">
+														<input id="check-2" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Projects</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-3">
+														<input id="check-3" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Webcast</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-4">
+														<input id="check-4" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Studies</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-5">
+														<input id="check-5" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Tools</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-6">
+														<input id="check-6" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Archive</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-7">
+														<input id="check-7" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Research</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="open-close active">
+										<a class="opener" href="#">Type</a>
+										<div class="slide">
+											<div class="check-holder">
+												<div class="check-box">
+													<label for="check-8">
+														<input id="check-8" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Article</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-9">
+														<input id="check-9" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Projects</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-10">
+														<input id="check-10" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Webcast</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-11">
+														<input id="check-11" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Studies</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-12">
+														<input id="check-12" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Tools</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-13">
+														<input id="check-13" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Archive</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-14">
+														<input id="check-14" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Research</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="open-close">
+										<a class="opener" href="#">Media Format</a>
+										<div class="slide">
+											<div class="check-holder">
+												<div class="check-box">
+													<label for="check-15">
+														<input id="check-15" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Article</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-16">
+														<input id="check-16" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Projects</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-17">
+														<input id="check-17" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Webcast</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-18">
+														<input id="check-18" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Studies</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-19">
+														<input id="check-19" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Tools</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-20">
+														<input id="check-20" type="checkbox" checked>
+														<span class="fake-input"></span>
+														<span class="fake-label">Archive</span>
+													</label>
+												</div>
+												<div class="check-box">
+													<label for="check-21">
+														<input id="check-21" type="checkbox">
+														<span class="fake-input"></span>
+														<span class="fake-label">Research</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+					<section class="col">
+						<ul class="tag-sort-list">
+							<li>
+								<a href="#">
+									<i class="icon-cross"></i>
+								</a>
+								<span>TOOLS</span>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon-cross"></i>
+								</a>
+								<span>studies</span>
+							</li>
+						</ul>
+						<div class="search-results-block">
+							<article class="item">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Webcast</a>
+									<h2><a href="#">Video-Based Learning: The Key to Preparing Sales Reps for the Empowered</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+							<article class="item alert">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Webcast</a>
+									<h2><a href="#">What's on Your iPad?</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+							<article class="item">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Webcast</a>
+									<h2><a href="#">How Excellent Sales Competency Models Make Excellent Sales Forces</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+							<article class="item">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Presentation Bank</a>
+									<h2><a href="#">Linking Sales Execution With the Business Plan</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+							<article class="item">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Research</a>
+									<h2><a href="#">Sales Force Job Descriptions Library</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+							<article class="item">
+								<div class="heading-box">
+									<a href="#" class="btn-tag">Training</a>
+									<h2><a href="#">Six Emerging Trends in Sales Force Effectiveness for Sales Managers</a></h2>
+									<a href="#" class="note-link">Register to read full article <i class="icon-star"></i></a>
+								</div>
+								<nav>
+									<ul class="breadcrumbs">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Breadcrumb</a></li>
+										<li>Breadcrumb</li>
+									</ul>
+								</nav>
+							</article>
+						</div>
+						<!-- pagination -->
+						<div class="pagination pagination-full">
+							<a class="prev page-numbers" href="https://localhost.com/wordpress/category/uncategorized/">&laquo; Previous</a>
+							<span class='page-numbers current'>1</span>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/2/'>2</a>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/3/'>3</a>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/4/'>4</a>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/5/'>5</a>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/6/'>6</a>
+							<a class='page-numbers' href='https://localhost.com/wordpress/category/uncategorized/page/7/'>7</a>
+							<a class="next page-numbers" href="https://localhost.com/wordpress/category/uncategorized/page/3/">Next &raquo;</a>
+						</div>
+						<!-- /pagination -->
+					</section>
+				</div>
+			</div>
+			<div class="section membership-section">
+				<div class="container">
+					<h2>Become a member for breaking industry insights</h2>
+					<a href="#" class="btn">Register</a>
+				</div>
+			</div>
+			<div class="section section-writers">
+				<span class="btn-tag">Underwriters</span>
+				<div class="logotype-gallery">
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-01.png, images/logotype-01-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-01.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-01.png, images/logotype-01-2x.png 2x">
+								<img src="images/logotype-01.png" alt="image description" width="170" height="30">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-02.png, images/logotype-02-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-02.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-02.png, images/logotype-02-2x.png 2x">
+								<img src="images/logotype-02.png" alt="image description" width="81" height="40">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-03.png, images/logotype-03-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-03.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-03.png, images/logotype-03-2x.png 2x">
+								<img src="images/logotype-03.png" alt="image description" width="111" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-04.png, images/logotype-04-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-04.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-04.png, images/logotype-04-2x.png 2x">
+								<img src="images/logotype-04.png" alt="image description" width="175" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-05.png, images/logotype-05-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-05.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-05.png, images/logotype-05-2x.png 2x">
+								<img src="images/logotype-05.png" alt="image description" width="87" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-06.png, images/logotype-06-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-06.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-06.png, images/logotype-06-2x.png 2x">
+								<img src="images/logotype-06.png" alt="image description" width="102" height="35">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-01.png, images/logotype-01-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-01.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-01.png, images/logotype-01-2x.png 2x">
+								<img src="images/logotype-01.png" alt="image description" width="170" height="30">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-02.png, images/logotype-02-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-02.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-02.png, images/logotype-02-2x.png 2x">
+								<img src="images/logotype-02.png" alt="image description" width="81" height="40">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-03.png, images/logotype-03-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-03.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-03.png, images/logotype-03-2x.png 2x">
+								<img src="images/logotype-03.png" alt="image description" width="111" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-04.png, images/logotype-04-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-04.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-04.png, images/logotype-04-2x.png 2x">
+								<img src="images/logotype-04.png" alt="image description" width="175" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-05.png, images/logotype-05-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-05.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-05.png, images/logotype-05-2x.png 2x">
+								<img src="images/logotype-05.png" alt="image description" width="87" height="34">
+							</picture>
+						</a>
+					</div>
+					<div class="slick-item">
+						<a href="#">
+							<!-- picturefill: full manual control -->
+							<picture>
+								<source srcset="images/logotype-06.png, images/logotype-06-2x.png 2x" media="(max-width: 767px)">
+								<source srcset="images/logotype-06.png" media="(max-width: 1024px)">
+								<source srcset="images/logotype-06.png, images/logotype-06-2x.png 2x">
+								<img src="images/logotype-06.png" alt="image description" width="102" height="35">
+							</picture>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer id="footer">
+		<div class="panel">
+			<div class="container">
+				<div class="panel-holder">
+					<div class="col">
+						<nav class="nav">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Resources</a></li>
+								<li><a href="#">Events</a></li>
+								<li><a href="#">Community</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Become a Member</a></li>
+								<li><a href="#">Login</a></li>
+							</ul>
+						</nav>
+						<div class="divider"></div>
+						<form action="#" class="follow-form">
+							<div class="col">
+								<a href="#" class="btn-tag">Follow Us</a>
+								<p>Stay up to date on events, updates and more.</p>
+							</div>
+							<div class="col">
+								<input type="email" placeholder="" />
+								<button type="submit"></button>
+							</div>
+						</form>
+						<div class="divider"></div>
+						<nav class="social-networks">
+							<ul>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col">
+						<div class="footer-promo">
+							<div class="bg-stretch">
+								<!-- picturefill: full manual control -->
+								<span data-srcset="images/bg-footer-promo.jpg, images/bg-footer-promo-2x.jpg 2x"></span>
+								<span data-srcset="images/bg-footer-promo.jpg, images/bg-footer-promo-2x.jpg 2x" data-media="(min-width: 768px)"></span>
+								<span data-srcset="images/bg-footer-promo.jpg, images/bg-footer-promo-2x.jpg 2x" data-media="(min-width: 1024px)"></span>
+							</div>
+							<div class="text text-center">
+								<h2><a href="#">Win an Apple iPad</a></h2>
+								<p>Participate in any of our Research Projects and you will <br>be entered to win an Apple iPad courtesy of SMA!</p>
+								<a href="#" class="btn-more">Find out more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<p><a href="#">The Sales Management Association</a> - Copyright 2008-2016</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -130,14 +130,14 @@
 		&[type='text']{
 			margin:0 4px 0 0;
 			width:205px;
-			@include media("<phone") {
+			@include media("<tablet") {
 				width:100%;
 				margin-bottom:15px;
 			}
 		}
 		&[type='password']{
 			width:205px;
-			@include media("<phone") {
+			@include media("<tablet") {
 				width:100%;
 			}
 		}

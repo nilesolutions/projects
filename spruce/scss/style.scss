@@ -738,7 +738,7 @@ a.btn {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     &:last-child {
-      @include media("≤767px"){
+      @include media("≤1023px"){
         margin-bottom:0;
       }
     }
@@ -753,15 +753,6 @@ a.btn {
       max-width:none;
       margin:0 15px 26px;
     }
-    // & + .item.lg {
-    //   margin-botton:0;
-    //   @include media("≥tablet"){
-    //     margin-top:47px;
-    //   }
-    //   @include media("≥desktop"){
-    //     margin-top:0;
-    //   }
-    // }
     
     .img-box {
       margin:0 0 10px;
@@ -797,6 +788,15 @@ a.btn {
     background:none;
     box-shadow:none;
     padding:0;
+    margin-bottom:0;
+    & + .item.lg.alt{
+      @include media("≥tablet"){
+        margin-top:47px;
+      }
+      @include media("≥desktop"){
+        margin-top:0;
+      }
+    }
     @include media("≥414px"){
       padding:0 28px;
     }
@@ -1180,8 +1180,12 @@ a.btn {
   @include media("≥tablet"){
     font-size:18px;
     letter-spacing:0;
+    padding:0 60px;
   }
   @include media("≥desktop"){
+    max-width:900px;
+    padding:0;
+    margin:0 auto;
     font-size:20px;
     letter-spacing:1px;
   }
@@ -2202,20 +2206,20 @@ div.lightbox {
   }
   @include media("≥tablet"){
     float: left;
-    width:65%;
+    width:calc(100% - 270px);
   }
   @include media("≥desktop"){
-    width:72%;
+    width:calc(100% - 350px);
   }
 }
 
 #sidebar { 
   @include media("≥tablet"){
     float: right;
-    width:30%;
+    width:230px;
   }
   @include media("≥desktop"){
-    width:23%;
+    width:300px;
   }
   
   #wp-calendar {
@@ -2225,9 +2229,12 @@ div.lightbox {
   .search-form {
     
     input[type="search"] {
-      width:150px;
+      width:100%;
       @include media("≥tablet"){
         width:150px;
+      }
+      @include media("≥desktop"){
+        width:188px;
       }
     }
     

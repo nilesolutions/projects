@@ -1,0 +1,110 @@
+/* iCheck plugin Flat skin, red
+----------------------------------- */
+.icheckbox_flat-red,
+.iradio_flat-red {
+    position:relative;
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0 15px 0 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background:#fff;
+    border: 2px solid #b4cf00;
+    cursor: pointer;
+    border-radius:100%;
+    transition:all $animation-speed ease;
+}
+
+.iradio_flat-red {
+    float:left;
+    &:after {
+        content:'';
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:14px;
+        height:14px;
+        transform:translate(-50%, -50%);
+        border-radius:100%;
+        background: #fe6666;
+        opacity:0;
+        visibility:hidden;
+        transition:all $animation-speed ease;
+        z-index:2;
+    }
+}
+
+.icheckbox_flat-red.checked {
+    border-color:#fe6666;
+    &:after {
+        opacity:1;
+        visibility:visible;
+    }
+}
+.icheckbox_flat-red.disabled {
+    //border-color:#ccc;
+}
+.icheckbox_flat-red.checked.disabled {
+    background-position: -66px 0;
+}
+
+.iradio_flat-red.checked {
+    border-color:#fe6666;
+    &:after {
+        opacity:1;
+        visibility:visible;
+    }
+}
+.iradio_flat-red.disabled {
+    //border-color:#ccc;
+    cursor: default;
+}
+.iradio_flat-red.checked.disabled {
+    //background-position: -154px 0;
+}
+
+// Error state for radio
+.iradio_flat-red.error {
+    border-color:#f00 !important;
+    &:after {
+        background:#f00 !important;
+    }
+}
+
+.custom-radio-holder {
+    
+    .icheckbox_flat-red {
+        display:inline-block;
+        position:relative;
+        width: 60px;
+        height: 30px;
+        border-color:#f3f3f3;
+        background-color: #f3f3f3;
+        border-radius: 15px;
+        margin:0;
+        &:after {
+            content:'';
+            position:absolute;
+            left:5px;
+            top:50%;
+            width:20px;
+            height:20px;
+            border-radius:100%;
+            background: #999;
+            z-index:2;
+            transform:translate(0, -50%);
+            transition:all $animation-speed ease;
+            pointer-events:none;
+        }
+    }
+    .icheckbox_flat-red.checked {
+        background:#fe6666;
+        border-color:#fe6666;
+        &:after {
+            left:calc(100% - 24px);
+            background:#fff;
+        }
+    }
+}

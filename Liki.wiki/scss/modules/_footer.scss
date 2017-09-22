@@ -1,0 +1,204 @@
+#footer {
+	@include clearfix;
+	color: #666;
+	margin: 0 0 60px;
+	padding: 40px 0 13px;
+	background-color: $dark;
+	overflow:hidden;
+	
+	.col {
+		float: left;
+		width: 786px;
+		padding: 0 20px 0 40px;
+		&:last-child {
+			float: right;
+			width: 372px;
+			text-align: right;
+			padding: 0 40px 0 20px;
+		}
+	}
+	
+	::-webkit-input-placeholder {
+		color: #666;
+	}
+	:-moz-placeholder {
+		color: #666;
+	}
+	::-moz-placeholder {
+		color: #666;
+	}
+	:-ms-input-placeholder {
+		color: #666;
+	}
+	
+	.search-form {
+		float: none;
+		display: block;
+		margin-bottom: 0;
+		margin-top: 0;
+		//width: calc(50% - 40px);
+		width:320px;
+		border-radius:3px;
+		
+		.input-holder {
+			margin:0 0 25px;
+		}
+		
+		input {
+			height:40px;
+			color: $white;
+			opacity: 1;
+			background-color: $black;
+			border-color:$black;
+			pointer-events: auto;
+			&:focus {
+				border-color:$black !important;
+			}
+			&::-webkit-input-placeholder {
+				color: #999;
+			}
+			&:-moz-placeholder {
+				color: #999;
+				opacity:1;
+			}
+			&::-moz-placeholder {
+				color: #999;
+			}
+			&:-ms-input-placeholder {
+				color: #999;
+			}
+		}
+		
+		label {
+			top:12px;
+			color:#666;
+		}
+		
+		.enter {
+			
+			label {
+				top:-15px;
+			}
+		}
+		
+		button {
+			top: 0;
+			&:hover {
+				svg {
+					fill:#fff;
+				}
+			}
+			
+			svg {
+				fill:#5e5e5e;
+			}
+		}
+	}
+	
+	.contacts {
+		float: none;
+		margin:0;
+		padding:0;
+		list-style:none;
+		color: #fff;
+		font-size: 16px;
+		font-weight:600;
+		padding-bottom: 14px;
+		li {
+			float: none;
+			border: 0;
+			padding: 0 0 16px;
+		}
+		em {
+			display: inline;
+			color: #666;
+			font:600 italic 12px/24px $open;
+		}
+		a {
+			color:#fff;
+			&:hover {
+				color:$green;
+			}
+		}
+	}
+	
+	.phone {
+		color: $white !important;
+		margin: 0 auto 27px;
+		width: 240px;
+		height: 60px;
+		font-size: 18px;
+		line-height: 57px;
+		@include border-radius(30px);
+		display: none;
+		background: none !important;
+		@media screen and (max-width: 1000px) {
+			display: block;
+		}
+	}
+}
+
+.menu {
+	@include list;
+	@include columns(3, 0);
+	li {
+		padding-bottom: 20px;
+	}
+	a {
+		color: $gray;
+		font-size: 13px;
+		line-height: 20px;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		}
+	}
+	.active a {color: $white;}
+}
+
+.pay {
+	@include list;
+	@include inline-li;
+	padding-bottom: 37px;
+	li {
+		@include v-align;
+		display:inline-block;
+		vertical-align:middle;
+		letter-spacing: normal;
+		margin-left: 23px;
+		&:first-child {margin: 0;}
+		&:hover {
+			svg {
+				opacity:1;
+			}
+		}
+	}
+	
+	svg {
+		fill:#fff;
+		opacity:0.5;
+	}
+	.icon-qiwi {
+		width:25px;
+		height:26px;
+	}
+	.icon-yandex {
+		width: 20px;
+		height:22px;
+	}
+	.icon-visa {
+		width: 45px;
+		height:14px;
+	}
+	.icon-master-card {
+		width: 31px;
+		height:19px;
+	}
+}
+
+.copyright {
+	display: block;
+	font-style: normal;
+	font-size: 11px;
+	line-height: 16px;
+}

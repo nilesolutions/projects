@@ -1,0 +1,338 @@
+[id="footer"] {
+  display:table-footer-group;
+  height:1%;
+  overflow:hidden;
+  font-size:11px;
+  line-height:15px;
+  color:#fff;
+  background:#37474f;
+  @include media("≥desktop"){
+    font-size:12px;
+    line-height:15px;
+  }
+  
+  a {
+    color:#fff;
+    &:hover {
+      color:$sunset-orange;
+    }
+  }
+  
+  .divider {
+    height:1px;
+    width:100%;
+    background:#fff;
+    margin:0 0 26px;
+    @include media("≥tablet"){
+      margin:0 0 24px;
+    }
+  }
+  
+  .container {
+    max-width:none;
+    @include media("≥desktop"){
+      padding-left:30px;
+      padding-right:30px;
+    }
+  }
+  
+  > .container {
+    padding:15px 10px 2px;
+    letter-spacing:0.5px;
+    @include media("≥tablet"){
+      padding:20px 20px 3px;
+    }
+    @include media("≥desktop"){
+      letter-spacing:0;
+    }
+  }
+}
+
+.panel {
+  padding:20px 0 36px;
+  background:#263238;
+  @include media("≥tablet"){
+    padding:32px 10px 22px;
+  }
+  @include media("≥desktop"){
+    padding:20px 0 17px;
+  }
+}
+
+.panel-holder {
+  @extend %clearfix;
+  
+  > .col {
+    @include media("≥desktop"){
+      width:460px;
+      float:right;
+      width:39%;
+    }
+    @include media("≥widescreen"){
+    }
+    &:first-child {
+      @include media("≥desktop"){
+        float:left;
+        width:calc(100% - 470px);
+        width:58%;
+      }
+      @include media("≥widescreen"){
+      }
+    }
+  }
+}
+
+.nav {
+  max-width:570px;
+  margin:0 auto;
+  font-size:12px;
+  line-height:15px;
+  @include media("≥desktop"){
+    max-width:none;
+    margin:0;
+  }
+  
+  ul {
+    margin:0;
+    padding:17px 0 16px;
+    text-align:center;
+    list-style:none;
+    @include media("≥tablet"){
+      padding:7px 0 0;
+      margin:0 -18px 11px;
+    }
+    @include media("≥desktop"){
+      text-align:left;
+      margin:0;
+    }
+  }
+  
+  li {
+    display:inline-flex;
+    margin:0 5px 19px;
+    @include media("≥375px"){
+      margin:0 8px 19px;
+    }
+    @include media("≥tablet"){
+      margin:0 11px 17px 15px;
+    }
+    @include media("≥desktop"){
+      margin:0 21px 21px 0;
+    }
+  }
+}
+
+.footer-promo {
+  position:relative;
+  @include media("≥desktop"){
+    display:flex;
+    align-items:center;
+    align-content:center;
+    height:100%;
+  }
+  
+  .bg-stretch {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-size:cover;
+    background-repeat:no-repeat;
+    &:after {
+      content:'';
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      background: rgba(#424242, 0.8);
+    }
+  }
+  
+  .text {
+    position:relative;
+    width:100%;
+    padding:58px 4px 44px;
+    font-size:12px;
+    line-height:16px;
+    z-index:2;
+    @include media("≥tablet"){
+      padding:58px 25px 44px;
+    }
+    @include media("≥tablet"){
+      padding:60px 35px 69px;
+      font-size:21px;
+      line-height:29px;
+    }
+    @include media("≥desktop"){
+      padding:42px 35px 38px;
+      font-size:14px;
+      line-height:20px;
+    }
+  }
+  
+  h2 {
+    font-size:24px;
+    margin:0 0 2px;
+    @include media("≥tablet"){
+      margin:0 0 9px;
+    }
+    @include media("≥desktop"){
+      font-size:28px;
+      margin:0 0 7px;
+    }
+  }
+  
+  p {
+    margin:0 0 15px;
+    @include media("≥tablet"){
+      margin:0 0 19px;
+    }
+  }
+}
+
+.btn-more {
+  position:relative;
+  font-size:12px;
+  font-weight:400;
+  padding-right:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  &:after {
+    @include triangle(7px 5px, #fff, right);
+    content:'';
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    transition:all $animation-speed ease;
+  }
+  &:hover {
+    &:after {
+      border-left-color:$sunset-orange;
+    }
+  }
+  @include media("≥tablet"){
+    letter-spacing:2.5px;
+  }
+  @include media("≥desktop"){
+    letter-spacing:1px;
+  }
+}
+
+.follow-form {
+  @extend %clearfix;
+  padding:0 27px 19px;
+  font-size:24px;
+  line-height:30px;
+  font-weight:300;
+  @include media("≥tablet"){
+    padding:0 0 8px;
+    font-size:13px;
+    line-height:17px;
+    font-weight:400;
+  }
+  @include media("≥desktop"){
+    font-size:14px;
+  }
+  
+  .col {
+    @extend %clearfix;
+    position:relative;
+    &:first-child {
+      @include media("≥tablet"){
+        padding:0 10px 0 0;
+      }
+    }
+    &:nth-child(2) {
+      background:#fff;
+      border-radius:2px;
+    }
+    @include media("≥tablet"){
+      float:left;
+      width:49%;
+      padding:0;
+      &:first-child {
+        width:51%;
+      }
+    }
+    @include media("≥desktop"){
+      width:56%;
+      &:first-child {
+        width:44%;
+      }
+    }
+  }
+  
+  .btn-tag {
+    display:inline-block;
+    vertical-align:top;
+    font-size:12px;
+    line-height:15px;
+    margin:11px 0 14px;
+    letter-spacing:2px;
+    @include media("≥tablet"){
+      margin:2px 0 7px;
+    }
+    @include media("≥desktop"){
+      letter-spacing:1px;
+    }
+  }
+  
+  input[type="email"] {
+    display:block;
+    width:calc(100% - 37px);
+    background:#fff;
+    border:none;
+    padding:12px 12px 11px;
+    border-radius:2px 0 0 2px;
+    box-shadow:none;
+    @include media("≥tablet"){
+      padding:10px 12px;
+      width:calc(100% - 45px);
+    }
+    @include media("≥desktop"){
+      padding:12px 12px 11px;
+    }
+  }
+  
+  button[type="submit"] {
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 37px;
+    height:auto;
+    //height: 43px;
+    background: #f64747;
+    border-radius: 2px;
+    &:before {
+      @include ico;
+      content: "\e905";
+      position:absolute;
+      left:55%;
+      top:50%;
+      color:#fff;
+      font-size:30px;
+      transform:translate(-50%, -50%);
+    }
+    &:hover {
+      background: #f64747 + 20;
+    }
+    @include media("≥tablet"){
+      width:45px;
+      //height:40px;
+    }
+    @include media("≥desktop"){
+      //height:43px;
+    }
+  }
+  
+  p {
+    margin:0 0 22px;
+    @include media("≥tablet"){
+      margin:0 0 15px;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+[id="footer"] {
+  display:table-footer-group;
+  height:1%;
+  font-size:14px;
+  line-height:17px;
+  font-weight:300;
+  color:rgba(#fff,0.3);
+  background:#215d76;
+  overflow:hidden;
+  
+  > .container {
+    padding-top: 27px;
+    padding-bottom: 19px;
+    @include media("≥tablet"){
+      padding-top: 25px;
+      letter-spacing:1px;
+    }
+    @include media("≥desktop"){
+      padding-top: 27px;
+      padding-bottom: 16px;
+      letter-spacing:0;
+    }
+  }
+  
+  .container {
+    @include media("≥414px"){
+      padding-left:59px;
+      padding-right:59px;
+    }
+    @include media("≥tablet"){
+      padding-left:20px;
+      padding-right:20px;
+    }
+  }
+  
+  .col-holder {
+    @extend %clearfix;
+    margin:0 0 -11px;
+    letter-spacing:-6px;
+    
+    .col {
+      margin:0 0 30px;
+      letter-spacing:0;
+      &:last-child {
+        margin:0;
+      }
+      @include media("≥tablet"){
+        display:inline-block;
+        vertical-align:top;
+        width:38%;
+        margin:0;
+      }
+      @include media("≥desktop"){
+        width:33.33%;
+      }
+      &:nth-child(2) {
+        @include media("≥tablet"){
+          width:36%;
+        }
+        @include media("≥desktop"){
+          padding-left:76px;
+          width:33.33%;
+        }
+      }
+      &:nth-child(3) {
+        @include media("≥tablet"){
+          width:26%;
+        }
+        @include media("≥desktop"){
+          padding-left:87px;
+          width:33.33%;
+        }
+      }
+    }
+  }
+  
+  .box {
+    margin:0 0 18px;
+    overflow:hidden;
+    @include media("≥tablet"){
+      margin:0 0 50px;
+    }
+    @include media("≥desktop"){
+      margin:0 0 56px;
+    }
+    &:last-child {
+      margin:0;
+    }
+  }
+  
+  .text {
+    
+    p {
+      margin:0 0 10px;
+    }
+    
+    a {
+      color:rgba(#fff,0.3);
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+  
+  .title {
+    font-size:21px;
+    line-height:24px;
+    font-weight:600;
+    color:rgba(#fff,0.7);
+    margin:0 0 24px;
+    @include media("≥tablet"){
+      margin:0 0 33px;
+    }
+    @include media("≥desktop"){
+      font-size:18px;
+      line-height:24px;
+      font-weight:300;
+      margin:0 0 30px;
+    }
+  }
+}
+
+#footer {
+  
+  ul {
+    margin:0;
+    
+    li {
+      padding-left:26px;
+      margin-bottom:20px;
+      &:before {
+        background:rgba(#fff,0.3);
+        top:6px;
+      }
+      @include media("≥tablet"){
+        margin-bottom:23px;
+      }
+    }
+    
+    a {
+      color:rgba(#fff,0.5);
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+}
+
+.panel {
+  padding:52px 0;
+  font-size:18px;
+  line-height:21px;
+  background:#23627c;
+  @include media("≥tablet"){
+    padding:56px 0;
+    font-size:17px;
+    line-height:20px;
+  }
+  @include media("≥desktop"){
+    padding:108px 0;
+    font-size:16px;
+    line-height:19px;
+  }
+}

@@ -1,0 +1,79 @@
+ul, ol, dl, p, h1, h2, h3, h4, h5, h6, address, form, table, blockquote, applet, embed, object, iframe, frameset {
+  margin:0 0 $vertical-rhythm;
+}
+
+blockquote {
+  position:relative;
+  font-size:22px;
+  line-height:30px;
+  font-family:$add-ff;
+  color:$black;
+  padding-left: 41px;
+  &:before {
+    content:'“';
+    position:absolute;
+    left: -4px;
+    top: 19px;
+    font-family:$add-ff;
+    font-size:60px;
+    font-weight:400;
+    color: $sunset-orange;
+    @include media("≥desktop"){
+      left:-7px;
+      top:31px;
+    }
+  }
+  @include media("≥tablet"){
+    padding-left:41px;
+  }
+  
+  cite {
+    font-size:18px;
+    line-height:22px;
+  }
+}
+
+
+th, td {
+  border: 1px solid $gray;
+  padding: .5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th{
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul, ol{ 
+  padding-left:3em; 
+}
+ul ul,
+ul ol,
+ol ul, 
+ol ol {
+  padding-left:3em;
+  margin:0;
+}
+
+ul {
+  list-style-type:disc;
+}
+
+dl {
+  @extend %clearfix;
+  dt {
+    float:left;
+    clear:left;
+    padding-right: .3em;
+    font-weight:bold;
+  }
+  dd {
+    overflow: hidden;
+  }
+}
+
+pre {
+  max-width: 100%;
+}
